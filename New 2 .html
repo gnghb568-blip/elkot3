@@ -3,83 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>لـ سلمى من قلبي 💜</title>
+    <title>لعبد من قلبي ❤️</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap');
         *{margin:0;padding:0;box-sizing:border-box;}
-        body,html{height:100%;width:100%;overflow:hidden;background:linear-gradient(135deg,#e0bbff,#c9a8ff);font-family:'Cairo',sans-serif;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;}
-        #login{position:fixed;inset:0;background:rgba(0,0,0,0.8);backdrop-filter:blur(20px);z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+        body,html{height:100%;width:100%;overflow:hidden;background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);font-family:'Cairo',sans-serif;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+        #login{position:fixed;inset:0;background:rgba(0,0,0,0.9);backdrop-filter:blur(20px);z-index:10;display:flex;flex-direction:column;align-items:center;justify-content:center;}
         input,button{font-size:28px;padding:20px;border-radius:50px;border:none;margin:15px;width:88%;max-width:400px;}
-        button{background:#c47aff;color:#fff;cursor:pointer;box-shadow:0 15px 35px rgba(196,122,255,0.6);}
-        h1{font-size:6em;margin:30px 0;}
-        .page{display:none;flex-direction:column;align-items:center;}
+        button{background:#00c2ff;color:#fff;cursor:pointer;box-shadow:0 15px 40px rgba(0,194,255,0.6);}
+        h1{font-size:6.5em;margin:30px 0;letter-spacing:3px;text-shadow:0 0 20px #00c2ff;}
+        .page{display:none;flex-direction:column;align-items:center;justify-content:center;height:100%;}
         .page.active{display:flex;}
-        .box{background:#fff;padding:20px;border-radius:25px;box-shadow:0 30px 70px rgba(0,0,0,0.5);margin:20px;width:92vw;max-width:560px;}
-        .box img,.box video{width:100%;border-radius:20px;}
-        .text{background:#fff;color:#333;padding:35px;border-radius:25px;font-size:2.7em;line-height:1.9;text-align:center;font-weight:900;margin:20px;}
-        #nextBtn{background:#c47aff;color:#fff;padding:22px 100px;border-radius:50px;font-size:2.8em;cursor:pointer;box-shadow:0 20px 40px rgba(0,0,0,0.5);transition:0.4s;margin-top:30px;}
-        #nextBtn:hover{transform:scale(1.15);}
-        .final{font-size:2.8em;line-height:2.1;text-align:center;margin:40px 25px;opacity:0;transition:opacity 3s;}
+        .box{background:rgba(255,255,255,0.1);backdrop-filter:blur(15px);padding:25px;border-radius:30px;box-shadow:0 30px 80px rgba(0,0,0,0.7);margin:20px;width:92vw;max-width:580px;border:2px solid rgba(0,194,255,0.4);}
+        .box img,.box video{width:100%;border-radius:25px;box-shadow:0 15px 40px rgba(0,0,0,0.6);}
+        .text{background:rgba(255,255,255,0.12);color:#fff;padding:40px;border-radius:30px;font-size:2.9em;line-height:1.9;text-align:center;font-weight:900;margin:20px;border:2px solid rgba(0,194,255,0.3);}
+        #nextBtn{background:#00c2ff;color:#fff;padding:24px 110px;border-radius:60px;font-size:3em;cursor:pointer;box-shadow:0 25px 50px rgba(0,194,255,0.5);transition:all 0.4s;margin-top:40px;}
+        #nextBtn:hover{transform:scale(1.18);background:#00e1ff;}
+        .final{font-size:3em;line-height:2.1;text-align:center;margin:40px 25px;opacity:0;transition:opacity 3s;background:rgba(0,0,0,0.4);padding:30px;border-radius:30px;}
         .final.show{opacity:1;}
     </style>
 </head>
 <body>
 
-<!-- شاشة الباسوورد -->
 <div id="login">
-    <h2>ادخلي الباسوورد يا سلمى يا قمر 💜</h2>
+    <h2>ادخل الباسوورد يا عبد يا جامد ❤️</h2>
     <input type="password" id="p" placeholder="الباسوورد">
-    <button onclick="checkPass()">دخلي يا روحي</button>
+    <button onclick="check()">دخل يا وحش</button>
 </div>
 
-<!-- الصفحات -->
 <div id="pages">
 
-    <!-- صفحة 1: رسالة الحب الأولى -->
-    <div class="page active" id="page1">
-        <h1>سلمى ♥</h1>
+    <!-- صفحة 1: الرسالة الأولى -->
+    <div class="page active" id="p1">
+        <h1>عبد ❤️</h1>
         <div class="text">
-            يا أجمل حاجة حصلتلي في حياتي..<br>
-            كل يوم بحبك أكتر من إمبارح 💜
+            يا أغلى وأجدع راجل في الدنيا..<br>
+            كل يوم بحبك أكتر يا صاحبي يا أخويا يا كل حاجة 💙
         </div>
-        <button id="nextBtn" onclick="nextPage()">التالي ➜</button>
+        <button id="nextBtn" onclick="next()">التالي ➜</button>
     </div>
 
     <!-- صفحة 2: الصورة -->
-    <div class="page" id="page2">
-        <h1>سلمى ♥</h1>
+    <div class="page" id="p2">
+        <h1>عبد ❤️</h1>
         <div class="box">
             <img src="https://i.ibb.co/TMFccPMV/Whats-App-Image-2025-11-29-at-11-46-52-PM.jpg">
         </div>
-        <button id="nextBtn" onclick="nextPage()">التالي ➜</button>
+        <button id="nextBtn" onclick="next()">التالي ➜</button>
     </div>
 
     <!-- صفحة 3: الفيديو -->
-    <div class="page" id="page3">
-        <h1>سلمى ♥</h1>
+    <div class="page" id="p3">
+        <h1>عبد ❤️</h1>
         <div class="box">
             <video controls autoplay loop>
                 <source src="https://files.catbox.moe/bf085n.mp4" type="video/mp4">
-                المتصفح مش بيدعم الفيديو.
             </video>
         </div>
-        <button id="nextBtn" onclick="nextPage()">التالي ➜</button>
+        <button id="nextBtn" onclick="next()">التالي ➜</button>
     </div>
 
     <!-- صفحة 4: الكلام النهائي -->
-    <div class="page" id="page4">
-        <h1>سلمى ♥</h1>
+    <div class="page" id="p4">
+        <h1>عبد ❤️</h1>
         <div class="final" id="final">
-            سلمى..<br><br>
-            أنتِ مش بس حبيبتي..<br>
-            أنتِ بيتي، أماني، ضحكتي، دموعي، كل حاجة حلوة في الدنيا.<br><br>
-            مهما أكتب ومهما أقول..<br>
-            مش هعرف أوصف قد إيه أنا محظوظ إنك في حياتي.<br><br>
-            بحبك أكتر من الكلام..<br>
-            أكتر من الوقت..<br>
-            أكتر من نفسي 💜<br><br>
-            دايمًا معاكي.. وبس..<br><br>
-            من قلبي لقلبك..
+            يا عبد..<br><br>
+            لو الدنيا كلها اتقلبت..<br>
+            أنا لسه هفضل جنبك زي ما إنت دايمًا جنبي.<br><br>
+            مش بس صاحبي..<br>
+            إنت أخويا الكبير، ضهري، سندي، وكل حاجة حلوة في حياتي.<br><br>
+            ربنا يخليك ليا ويبارك فيك يا أجدع راجل ❤️<br><br>
+            دايمًا معاك.. للآخر.
         </div>
     </div>
 
@@ -90,26 +84,21 @@
 </audio>
 
 <script>
-const pass = "572009";
-let current = 1;
+let cur = 1;
 
-function checkPass(){
-    if(document.getElementById('p').value === pass){
-        document.getElementById('login').style.display = 'none';
+function check(){
+    if(document.getElementById('p').value === "572009"){
+        document.getElementById('login').style.display='none';
         document.getElementById('song').play();
-    } else {
-        alert("الباسوورد غلط يا قمر 💜");
-    }
+    } else alert("الباسوورد غلط يا وحش ❤️");
 }
 
-function nextPage(){
-    document.getElementById('page'+current).classList.remove('active');
-    current++;
-    if(current <= 4){
-        document.getElementById('page'+current).classList.add('active');
-    }
-    if(current === 4){
-        setTimeout(() => document.getElementById('final').classList.add('show'), 800);
+function next(){
+    document.getElementById('p'+cur).classList.remove('active');
+    cur++;
+    document.getElementById('p'+cur).classList.add('active');
+    if(cur === 4){
+        setTimeout(() => document.getElementById('final').classList.add('show'), 1000);
     }
 }
 </script>
